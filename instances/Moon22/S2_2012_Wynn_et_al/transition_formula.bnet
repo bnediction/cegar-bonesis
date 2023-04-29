@@ -1,0 +1,18 @@
+MYC,!OverPop & !Hypoxia &  (AKT | RAS)
+RAS,GrowthFactor 
+FOXO,!AKT 
+AKT,GrowthFactor & !PTEN 
+P27, (!MYC | Hypoxia | FOXO)
+Cyc_Cdk,!P27 & !P53 
+P53,DNA_Damage & !MDM2 
+Prolif,Cyc_Cdk 
+BAD,!AKT 
+MDM2,P53 
+Apop,BAX 
+BAX,P53 & BAD 
+PTEN,PTEN 
+OverPop,OverPop 
+Hypoxia,Hypoxia 
+GrowthFactor,GrowthFactor 
+DNA_Damage,DNA_Damage 
+p, !Apop & Prolif

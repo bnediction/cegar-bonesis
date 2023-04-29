@@ -1,0 +1,28 @@
+{
+    "controllable_vars": [
+        "ERBB1",
+        "ERBB2",
+        "ERBB3",
+        "ERBB1_2",
+        "ERBB1_3",
+        "ERBB2_3",
+        "IGF1R",
+        "ER_a",
+        "c_MYC",
+        "AKT1",
+        "MEK1",
+        "CDK2",
+        "CDK4",
+        "CDK6",
+        "Cyclin_D1",
+        "Cyclin_E1",
+        "p21",
+        "p27",
+        "EGF"
+    ],
+    "uncontrollable_vars": [
+        "pRB",
+        "p"
+    ],
+    "input": {}
+}

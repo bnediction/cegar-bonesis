@@ -1,0 +1,21 @@
+ERBB1,EGF 
+ERBB2,EGF 
+ERBB3,EGF 
+ERBB1_2,ERBB1 & ERBB2 
+ERBB1_3,ERBB1 & ERBB3 
+ERBB2_3,ERBB2 & ERBB3 
+IGF1R,!ERBB2_3 &  (ER_a | AKT1)
+ER_a, (AKT1 | MEK1)
+c_MYC, (ER_a | AKT1 | MEK1)
+AKT1, (ERBB1 | ERBB1_2 | ERBB1_3 | ERBB2_3 | IGF1R)
+MEK1, (ERBB1 | ERBB1_2 | ERBB1_3 | ERBB2_3 | IGF1R)
+CDK2,Cyclin_E1 & !p21 & !p27 
+CDK4,!p21 & !p27 & Cyclin_D1 
+CDK6,Cyclin_D1 
+Cyclin_D1,ER_a & c_MYC &  (AKT1 | MEK1)
+Cyclin_E1,c_MYC 
+p21,ER_a & !AKT1 & !c_MYC & !CDK4 
+p27,ER_a & !AKT1 & !c_MYC & !CDK2 & !CDK4 
+pRB,CDK4 & CDK6 
+EGF,EGF 
+p, !pRB

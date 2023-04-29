@@ -1,0 +1,26 @@
+{
+    "controllable_vars": [
+        "TrkB",
+        "BDNF",
+        "TrkA",
+        "NGF",
+        "MDK",
+        "ALK",
+        "Ras",
+        "AKT",
+        "MYCN",
+        "FOXO",
+        "p27",
+        "p53",
+        "MDM2",
+        "IP3"
+    ],
+    "uncontrollable_vars": [
+        "Differentiation",
+        "Apoptosis",
+        "Angiogenesis",
+        "Proliferation",
+        "p"
+    ],
+    "input": {}
+}

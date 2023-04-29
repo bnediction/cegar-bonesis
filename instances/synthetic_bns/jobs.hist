@@ -1,0 +1,2 @@
+TIMEOUT=10m make -j3 $(bash gen_targets_P3.sh cegar3 1 2 4 6)
+TIMEOUT=1h make -j3 $(bash gen_targets_synthesis.sh cegar3_nocanonic 32)

@@ -1,0 +1,60 @@
+CTLA4,TCR 
+TCR,!CTLA4 & Stimuli 
+PDGFR, (S1P | PDGF)
+FYN, (TCR | IL2RB)
+Cytoskeleton_signaling,FYN 
+LCK, (TCR | IL2RB | CD45) & (CD45 | !ZAP70)
+ZAP70,!FYN & LCK 
+GRB2, (IL2RB | ZAP70)
+PLCG1, (PDGFR | GRB2)
+RAS,!GAP &  (GRB2 | PLCG1)
+GAP,!IL15 & !IL2 &  (RAS | GAP) & (PDGFR | RAS)
+MEK,RAS 
+ERK,MEK & PI3K 
+PI3K, (PDGFR | RAS)
+NFKB, (PI3K | TPL2 | FLIP) & (PI3K | TPL2 | TRADD) & (PI3K | TPL2 | IAP)
+NFAT,PI3K 
+RANTES,NFKB 
+IL2,!TBET &  (NFKB | NFAT | STAT3)
+IL2RBT,ERK & TBET 
+IL2RB,IL2RBT &  (IL15 | IL2)
+IL2RAT,IL2 &  (NFKB | STAT3)
+IL2RA,IL2 & IL2RAT & !IL2RA 
+JAK,!CD45 & !SOCS &  (IL2RB | RANTES | IL2RA | IFNG)
+SOCS,!IL15 & !IL2 & JAK 
+STAT3,JAK 
+P27,STAT3 
+Proliferation,STAT3 & !P27 
+TBET, (TBET | JAK)
+CREB,ERK & IFNG 
+IFNGT, (NFAT | STAT3 | TBET)
+IFNG,IFNGT & !SMAD & !P2 &  (Stimuli | IL15 | IL2)
+P2,!Stimuli &  (IFNG | P2)
+GZMB, (TBET | CREB) & (TBET | IFNG)
+TPL2, (TAX | TNF) & (PI3K | TAX)
+TNF,NFKB 
+TRADD,!IAP & TNF & !A20 
+FasL, (ERK | NFKB | NFAT | STAT3)
+FasT,NFKB 
+Fas,FasL & FasT & !sFas 
+sFas,FasT & S1P
+Ceramide,!S1P & Fas 
+DISC,FasT &  (IL2 | !FLIP | Ceramide) & (Fas | Ceramide)
+Caspase, (!IAP | DISC) & (DISC | BID) & (TRADD | GZMB | DISC)
+FLIP,!DISC &  (NFKB | CREB) & (NFKB | IFNG)
+A20,NFKB 
+BID,!BclxL & !MCL1 &  (GZMB | Caspase)
+IAP,NFKB & !BID 
+BclxL,!GZMB & !DISC & !BID &  (NFKB | STAT3)
+MCL1,IL2RB & PI3K & NFKB & STAT3 & !DISC
+Apoptosis,Caspase 
+GPCR,S1P 
+SMAD,GPCR 
+SPHK1,PDGFR 
+S1P,!Ceramide & SPHK1 
+Stimuli,Stimuli 
+PDGF,PDGF 
+CD45,CD45 
+IL15,IL15 
+TAX,TAX
+p,!Apoptosis & Proliferation

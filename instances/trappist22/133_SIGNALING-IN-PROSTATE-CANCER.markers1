@@ -1,0 +1,16 @@
+{"GLUT1": 1}
+{"Proliferation": 1}
+{"DNA_Repair": 0}
+{"Apoptosis": 1}
+{"GLUT1": 0}
+{"BMP2": 0}
+{"Proliferation": 0}
+{"VEGF": 1}
+{"DNA_Repair": 1}
+{"Apoptosis": 0}
+{"Metastasis": 1}
+{"VEGF": 0}
+{"BMP2": 1}
+{"Lactic_acid": 1}
+{"Lactic_acid": 0}
+{"Metastasis": 0}

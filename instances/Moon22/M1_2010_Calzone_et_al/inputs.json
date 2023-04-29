@@ -1,0 +1,36 @@
+{
+    "controllable_vars": [
+        "ATP",
+        "BAX",
+        "BCL2",
+        "CASP3",
+        "CASP8",
+        "Cyt_c",
+        "DISC_FAS",
+        "DISC_TNF",
+        "FADD",
+        "FASL",
+        "IKK",
+        "MOMP",
+        "MPT",
+        "NFkB",
+        "RIP1",
+        "RIP1K",
+        "RIP1ub",
+        "ROS",
+        "SMAC",
+        "TNF",
+        "TNFR",
+        "XIAP",
+        "apoptosome",
+        "cFLIP",
+        "cIAP"
+    ],
+    "uncontrollable_vars": [
+        "Apoptosis",
+        "NonACD",
+        "Survival",
+        "p"
+    ],
+    "input": {}
+}

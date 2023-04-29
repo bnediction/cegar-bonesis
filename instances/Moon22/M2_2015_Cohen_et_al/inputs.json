@@ -1,0 +1,40 @@
+{
+    "controllable_vars": [
+        "AKT1",
+        "AKT2",
+        "CDH1",
+        "CDH2",
+        "CTNNB1",
+        "DKK1",
+        "DNAdamage",
+        "ECMicroenv",
+        "ERK",
+        "GF",
+        "NICD",
+        "SMAD",
+        "SNAI1",
+        "SNAI2",
+        "TGFbeta",
+        "TWIST1",
+        "VIM",
+        "ZEB1",
+        "ZEB2",
+        "miR200",
+        "miR203",
+        "miR34",
+        "p21",
+        "p53",
+        "p63",
+        "p73"
+    ],
+    "uncontrollable_vars": [
+        "Apoptosis",
+        "CellCycleArrest",
+        "Metastasis",
+        "Migration",
+        "Invasion",
+        "EMT",
+        "p"
+    ],
+    "input": {}
+}

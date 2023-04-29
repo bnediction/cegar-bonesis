@@ -1,0 +1,24 @@
+{
+    "CNF_conversion": false,
+    "method": "CUT",
+    "solver": "GRB",
+    "max_core_size": 7,
+    "max_T": 50,
+    "time_limit": 43200,
+    "export": {
+        "dir_name": "result",
+        "core_csv": true,
+        "core_summary_csv": true,
+        "core_console": true
+    },
+    "HPR": {
+        "verbose": 0,
+        "threads": -1,
+        "preprocess": 1
+    },
+    "LLP": {
+        "verbose": 0,
+        "threads": -1,
+        "preprocess": 1
+    }
+}
