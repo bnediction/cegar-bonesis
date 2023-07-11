@@ -1,0 +1,36 @@
+EGFR_stimulus,EGFR_stimulus 
+FGFR3_stimulus,FGFR3_stimulus 
+DNAdamage,DNAdamage 
+GrowthInhibitors,GrowthInhibitors 
+Proliferation, (CyclinA | CyclinE1)
+Apoptosis, (E2F1 | !E2F1_2) & (E2F1_2 | TP53)
+Apoptosis_2,E2F1 & E2F1_2 
+GrowthArrest, (p21CIP | RB1 | RBL2)
+EGFR,!FGFR3 & !GRB2 &  (EGFR_stimulus | SPRY)
+FGFR3,FGFR3_stimulus & !EGFR & !GRB2 
+E2F1,!RB1 & !RBL2 &  (CHEK1_2 | !CHEK1_2_2) & (ATM | !ATM_2) & (E2F3 | !E2F3_2) & (E2F3 | RAS)
+E2F1_2,!RB1 & !RBL2 & ATM & ATM_2 & CHEK1_2 & CHEK1_2_2 &  (E2F3 | !E2F3_2) & (E2F3_2 | RAS)
+RAS, (EGFR | FGFR3 | GRB2)
+E2F3,!RB1 & RAS &  (CHEK1_2 | !CHEK1_2_2)
+E2F3_2,!RB1 & CHEK1_2 & CHEK1_2_2 & RAS 
+CyclinD1,!p21CIP & !p16INK4a &  (RAS | AKT)
+CyclinE1,!p21CIP & !RBL2 & CDC25A &  (E2F3 | !E2F3_2) & (E2F1 | !E2F1_2) & (E2F1 | E2F3)
+CyclinA,!p21CIP & !RBL2 & CDC25A &  (E2F3 | !E2F3_2) & (E2F1 | !E2F1_2) & (E2F1 | E2F3)
+CDC25A,!RBL2 & !CHEK1_2 & !CHEK1_2_2 &  (E2F1 | E2F3) & (E2F3 | !E2F3_2) & (E2F1 | !E2F1_2)
+p16INK4a,GrowthInhibitors & !RB1 
+RB1,!CyclinA & !CyclinE1 & !CyclinD1 & !p16INK4a 
+RBL2,!CyclinE1 & !CyclinD1 
+p21CIP,!CyclinE1 & !AKT &  (GrowthInhibitors | TP53)
+ATM,DNAdamage &  (E2F1 | !E2F1_2)
+ATM_2,DNAdamage & E2F1 
+CHEK1_2,ATM &  (E2F1 | !E2F1_2)
+CHEK1_2_2,E2F1 & ATM 
+MDM2,!RB1 & !ATM & !ATM_2 & !p14ARF &  (TP53 | AKT)
+TP53,!MDM2 &  (CHEK1_2 | !CHEK1_2_2) & (E2F1_2 | ATM) & (ATM | !ATM_2) & (E2F1_2 | CHEK1_2) & (E2F1 | !E2F1_2)
+p14ARF,E2F1 
+PTEN,TP53 
+PI3K,GRB2 & RAS & !PTEN 
+AKT,PI3K 
+GRB2, (EGFR | FGFR3) & (EGFR | !GRB2) & (EGFR | !SPRY)
+SPRY,RAS
+p, Proliferation & !Apoptosis & !Apoptosis_2 & !GrowthArrest

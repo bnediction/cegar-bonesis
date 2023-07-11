@@ -1,0 +1,43 @@
+{
+    "controllable_vars": [
+        "EGFR_stimulus",
+        "FGFR3_stimulus",
+        "DNAdamage",
+        "GrowthInhibitors",
+        "EGFR",
+        "FGFR3",
+        "E2F1",
+        "E2F1_2",
+        "RAS",
+        "E2F3",
+        "E2F3_2",
+        "CyclinD1",
+        "CyclinE1",
+        "CyclinA",
+        "CDC25A",
+        "p16INK4a",
+        "RB1",
+        "RBL2",
+        "p21CIP",
+        "ATM",
+        "ATM_2",
+        "CHEK1_2",
+        "CHEK1_2_2",
+        "MDM2",
+        "TP53",
+        "p14ARF",
+        "PTEN",
+        "PI3K",
+        "AKT",
+        "GRB2",
+        "SPRY"
+    ],
+    "uncontrollable_vars": [
+        "Proliferation",
+        "Apoptosis",
+        "Apoptosis_2",
+        "GrowthArrest",
+        "p"
+    ],
+    "input": {}
+}
