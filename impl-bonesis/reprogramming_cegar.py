@@ -87,6 +87,12 @@ def trapspace_reprogramming(dom, M, k,exclude, mode=3, display="cli", tick=None)
                         f"{ns}eval(X,N,-1) :- {ns}eval(X,N,C,-1): clause(N,C,_,_); clause(N,_,_,_), mcfg(X,_,_).",
                         f"{ns}eval(X,N,V) :- clamped(X,N,V).",
                         f"{ns}eval(X,N,V) :- constant(N,V), mcfg(X,_,_), not clamped(X,N,_).",
+
+                        f"{ns}eval(X,N,V) :- {ns}evalbdd(X,N,V), node(N), not clamped(X,N,_).",
+                        f"{ns}evalbdd(X,V,V) :- mcfg(X,_,_), V=(-1;1).",
+                        f"{ns}evalbdd(X,B,V) :- bdd(B,N,_,HI), mcfg(X,N,1), {ns}evalbdd(X,HI,V).",
+                        f"{ns}evalbdd(X,B,V) :- bdd(B,N,LO,_), mcfg(X,N,-1), {ns}evalbdd(X,LO,V).",
+                        f"{ns}evalbdd(X,B,V) :- mcfg(X,_,_), bdd(B,V).",
                     ]
                 if mode >= 3:
                     # TS(y) must match with M
