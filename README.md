@@ -1,23 +1,38 @@
 # Tackling Universal Properties of Minimal Trap Spaces of Boolean Networks
 
-Status:
+Supplementary code and data for the conference article
+
+> "Tackling universal properties of minimal trap spaces of boolean networks"
+> Sara Riva, Jean-Marie Lagniez, Gustavo Magaña López, and Loïc Paulevé
+> Proceedings of CMSB 2023, LCNS, Springer.
+> https://doi.org/10.48550/arXiv.2305.02442
+
+## Status
+
 - CEGAR-based reprogramming of minimal trap spaces, using an NP and a 2QBF problem (`impl-bonesis/reprogramming_cegar.py`)
-- CEGAR-based synthesis with properties of minimal trap spaces, an NP and a 2QBF problem (`impl-bonesis/synthesis.py`)
+- CEGAR-based synthesis of locally-monotone BNs with properties of minimal trap spaces, an NP and a 2QBF problem (`impl-bonesis/synthesis.py`)
 
-Limitations:
-- Locally-monotone BNs
+## Requirements
 
-Requirements:
-- `git submodule update --recursive --remote  --init`
-- `pip install deps/bonesis`
+- [bonesis](https://github.com/bnediction/bonesis)
 
-to execute the CEGAR approach for a synthesis problem
-- `https://rustup.rs`
-- `pip install biodivine-aeon`
+    With pip:
+    - `pip install bonesis`
 
-Usage:
+    With conda:
+    - `conda install -c potassco -c colomoto bonesis`
 
-#
+- for the synthesis: [AEON.py](https://github.com/sybila/biodivine-aeon-py/)
+
+    With pip:
+    - https://rustup.rs
+    - `pip install biodivine-aeon`
+
+    With conda
+    - `conda install -c daemontus biodivine_aeon`
+
+
+## Usage
 
 - to execute the CEGAR approach for marker-reprogramming problem:
 ```
@@ -54,6 +69,3 @@ python impl-bonesis/synthesis.py instances/Moon22/L3_2013_Grieco_et_al/transitio
 The first parameter is the prior knowledge graph in an .aeon file and the second one is the marker (in JSON). 
 Another option is `--maxclause` which allow one to specify the maximum integer number of clauses authorised in local functions (by default is 128).
 The option `--no-canonic` leads to specify the criteria for the refinement of the under-approximation (3 for TS(y)|=M ; 1 for \exists y s.t. TS(y)!=TS(x) or 0 to obtain just a different candidate solution).
-   
-
-
