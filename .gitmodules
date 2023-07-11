@@ -1,3 +1,0 @@
-[submodule "deps/bonesis"]
-	path = deps/bonesis
-	url = https://github.com/bnediction/bonesis
