@@ -8,6 +8,10 @@ from bonesis0.asp_encoding import configurations_of_facts
 
 bonesis.settings["quiet"] = True
 
+def other_constraints(bo):
+    # add additional dynamical constraints on a BoNesis instance
+    pass
+
 def trapspace_synthesis(dom, M, mode=3, display="cli", tick=None, **opts):
     data = {"M": M}
 
@@ -15,6 +19,7 @@ def trapspace_synthesis(dom, M, mode=3, display="cli", tick=None, **opts):
     if mode <= 3:
         # there exists at least one minimal trap spaces matching M
         bo.fixed(bo.obs("M"))
+    other_constraints(bo)
 
     class BoCegar(BooleanNetworksView):
         single_shot = False
@@ -37,6 +42,7 @@ def trapspace_synthesis(dom, M, mode=3, display="cli", tick=None, **opts):
 
                         ## check candidate
                         boc = bonesis.BoNesis(f, data)
+                        other_constraints(boc)
                         x = boc.cfg()
                         boc.in_attractor(x)
                         x != boc.obs("M")
